@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>Todo List</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <nav class="navbar-dark bg-dark py-3">
+            <div class="container-fluid">
+            <a class="navbar-brand fs-3" href="index.html">Lista de tarefas</a>
+            </div>
+        </nav>
+
+        <!-- Form section -->
+        <main>
+            <!-- Container -->
+            <div class="container mt-2">
+                <h1>Cadastro das tarefas</h1>
+                <!-- Alert messages -->
+                <div class="alert alert-success alert-dismissible fade hide-mensagem show" role="alert" id="alert-cadastro-tarefa-sucesso">
+                    Tarefa cadastrada com sucesso
+                </div>
+                <div class="alert alert-danger alert-dismissible fade show  hide-mensagem" role="alert" id="alert-cadastro-tarefa-erro">
+                    Preencha os campos
+                </div>
+                <!-- Form -->
+                <form class="mt-5" id="form-cadastro-tarefa">
+                    <div class="mb-3">
+                      <label for="tarefa" class="form-label">Tarefa</label>
+                      <input type="text" class="form-control" id="tarefa" aria-describedby="emailHelp" placeholder="Digite uma tarefa">
+                    </div>
+                    <div class="mb-3">
+                      <label for="data" class="form-label">Data</label>
+                      <input type="text" class="form-control data" id="data" placeholder="Digite a data dessa tarefa">
+                    </div>
+                    <button type="submit" class="btn btn-dark">Salvar</button>
+                  </form>
+            </div>
+            <form>
+        </main>
+
+        
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery-3.6.0.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+        <script src="js/jquery.js"></script>
+    </body>
+</html>
