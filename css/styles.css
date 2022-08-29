@@ -6,3 +6,8 @@
 .hide-mensagem {
     display: none;
 }
+
+td, tr {
+    text-align: center;
+    font-weight: bold;
+}

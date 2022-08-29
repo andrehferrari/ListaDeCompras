@@ -12,7 +12,7 @@
         <!-- Header -->
         <nav class="navbar-dark bg-dark py-3">
             <div class="container-fluid">
-            <a class="navbar-brand fs-3" href="index.html">Lista de tarefas</a>
+            <a class="navbar-brand fs-3" href="index.html">Lista de compras</a>
             </div>
         </nav>
 
@@ -20,7 +20,7 @@
         <main>
             <!-- Container -->
             <div class="container mt-2">
-                <h1>Cadastro das tarefas</h1>
+                <h1>Cadastro dos itens de compras</h1>
                 <!-- Alert messages -->
                 <div class="alert alert-success alert-dismissible fade hide-mensagem show" role="alert" id="alert-cadastro-tarefa-sucesso">
                     Tarefa cadastrada com sucesso
@@ -29,17 +29,33 @@
                     Preencha os campos
                 </div>
                 <!-- Form -->
-                <form class="mt-5" id="form-cadastro-tarefa">
+                <form class="mt-5" id="form-cadastro-lista">
                     <div class="mb-3">
-                      <label for="tarefa" class="form-label">Tarefa</label>
-                      <input type="text" class="form-control" id="tarefa" aria-describedby="emailHelp" placeholder="Digite uma tarefa">
+                      <label for="item" class="form-label">Item</label>
+                      <input type="text" class="form-control" id="item" placeholder="Digite um item">
                     </div>
                     <div class="mb-3">
-                      <label for="data" class="form-label">Data</label>
-                      <input type="text" class="form-control data" id="data" placeholder="Digite a data dessa tarefa">
+                      <label for="quantidade" class="form-label">Quantidade</label>
+                      <input type="text" class="form-control data" id="quantidade" placeholder="Digite a quantidade desse item">
                     </div>
-                    <button type="submit" class="btn btn-dark">Salvar</button>
+                    <div class="mb-3">
+                      <label for="preco" class="form-label">Preço</label>
+                      <input type="text" class="form-control data" id="preco" placeholder="Digite o preço do item">
+                    </div>
+                    <button id='btn-save' class="btn btn-dark">Salvar</button>
                   </form>
+                  <table class="table mt-5" id="tabela-compras">
+                    <thead class="bg-dark text-light">
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
             </div>
             <form>
         </main>
@@ -47,7 +63,7 @@
         
         <script src="./js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery-3.6.0.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+        <script src="./js/jquery.maskMoney.min.js" type="text/javascript"></script>
         <script src="js/jquery.js"></script>
     </body>
 </html>

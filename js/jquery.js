@@ -1,21 +1,36 @@
-$(document).ready(() =>{
+   $('#btn-save').click(function(){
+    var linha = $('<tr/>')
+    linha.addClass('linha-tarefa')
+    var colunaItem = $('<td/>')
+    var colunaQnt = $('<td/>')
+    var colunaPreco = $('<td/>')
+    var tdButton = $('<td/>')
+    var btnExcluir = $('<button/>')
+    btnExcluir.addClass('exclude')
+    btnExcluir.click((e) => {
+      e.target.parentNode.parentNode.remove()
+    })
 
-   $('#form-cadastro-tarefa').submit(function(e){
-    let tarefa = $('#tarefa').val();
-    let data = $('#data').val();
+    colunaItem.html($('#item').val())
+    colunaQnt.html($('#quantidade').val())
+    colunaPreco.html($('#preco').val())
+    btnExcluir.html('Excluir')
+    btnExcluir.addClass('btn btn-dark')
 
-    // Validando o formulário
-    if(!tarefa || !data){
-        $('#alert-cadastro-tarefa-erro').show();
-        $('#alert-cadastro-tarefa-sucesso').hide();
-        return false;
-    } else {
-        $('#alert-cadastro-tarefa-sucesso').show();
-        $('#alert-cadastro-tarefa-erro').hide();
-    }
-        
+    tdButton.append(btnExcluir)
+    linha.append(colunaItem)
+    linha.append(colunaQnt)
+    linha.append(colunaPreco)
+    linha.append(tdButton)
 
-    e.preventDefault();
+    $('#tabela-compras').append(linha)
+    return false;
    });
-   $('.data').mask('00/00/0000')
-});
+
+   $(function(){
+      $('#preco').maskMoney({
+        prefix:'R$ ',
+        allowNegative: true,
+        thousands:'.', decimal:',',
+        affixesStay: true});
+  }) 
