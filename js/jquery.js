@@ -27,7 +27,7 @@
     })
 
     // Validando o formulário
-    if(!itemInput || !qntInput || !precoInput) {
+    if(!itemInput.val() || !qntInput.val() || !precoInput.val()) {
       msgSucesso.hide()
       msgErro.show()
       return false;
