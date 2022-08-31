@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/styles.css">
-        <title>Todo List</title>
+        <title>Lista de compras</title>
     </head>
     <body>
         <!-- Header -->
@@ -15,18 +15,16 @@
             <a class="navbar-brand fs-3" href="index.html">Lista de compras</a>
             </div>
         </nav>
-
-        <!-- Form section -->
         <main>
             <!-- Container -->
             <div class="container mt-2">
                 <h1>Cadastro dos itens de compras</h1>
                 <!-- Alert messages -->
                 <div class="alert alert-success alert-dismissible fade hide-mensagem show" role="alert" id="alert-cadastro-tarefa-sucesso">
-                    Tarefa cadastrada com sucesso
+                    Tarefa cadastrada com sucesso !!
                 </div>
                 <div class="alert alert-danger alert-dismissible fade show  hide-mensagem" role="alert" id="alert-cadastro-tarefa-erro">
-                    Preencha os campos
+                    Preencha todos os campos !!
                 </div>
                 <!-- Form -->
                 <form class="mt-5" id="form-cadastro-lista">
@@ -50,7 +48,7 @@
                             <th>Item</th>
                             <th>Quantidade</th>
                             <th>Preço</th>
-                            <th></th>
+                            <th>Deletar itens</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -59,8 +57,6 @@
             </div>
             <form>
         </main>
-
-        
         <script src="./js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery-3.6.0.js"></script>
         <script src="./js/jquery.maskMoney.min.js" type="text/javascript"></script>
